@@ -1,7 +1,17 @@
 import axios from 'axios';
 
+const normalizeApiBase = (value) => {
+  const cleanedValue = (value || 'https://pocketpay-ejdi.onrender.com/api/v1').trim().replace(/\s+/g, '');
+
+  if (/\/api\/v1$/i.test(cleanedValue)) {
+    return cleanedValue.replace(/\/+$/, '');
+  }
+
+  return `${cleanedValue.replace(/\/+$/, '')}/api/v1`;
+};
+
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api/v1',
+  baseURL: normalizeApiBase(import.meta.env.VITE_API_URL || 'https://pocketpay-ejdi.onrender.com/api/v1'),
   headers: {
     'Content-Type': 'application/json'
   }

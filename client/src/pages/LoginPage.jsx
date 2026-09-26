@@ -41,12 +41,6 @@ export const LoginPage = () => {
     }
   };
 
-  // Demo credential autofill helper
-  const autofillDemo = (demoPhone, demoPass) => {
-    setPhone(demoPhone);
-    setPassword(demoPass);
-  };
-
   return (
     <div className="max-w-md mx-auto py-6 sm:py-12">
       <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
@@ -108,29 +102,6 @@ export const LoginPage = () => {
             <ArrowRight className="w-4 h-4" />
           </Button>
         </form>
-
-        {/* Demo Fast-Login Helper for Testing */}
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-xs space-y-2">
-          <p className="font-bold text-gray-700">Quick Test Credentials (Hyderabad Seed):</p>
-          <div className="flex flex-col gap-1.5">
-            <button
-              type="button"
-              onClick={() => autofillDemo('+919876511111', 'password123')}
-              className="text-left px-2.5 py-1.5 bg-white border border-gray-200 rounded-lg text-gray-800 hover:border-brand-500 flex items-center justify-between"
-            >
-              <span>👤 Worker: Kiran (+919876511111)</span>
-              <span className="text-[10px] text-brand-600 font-semibold">Autofill</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => autofillDemo('+919876500001', 'password123')}
-              className="text-left px-2.5 py-1.5 bg-white border border-gray-200 rounded-lg text-gray-800 hover:border-brand-500 flex items-center justify-between"
-            >
-              <span>🏪 Employer: Ravi Cafe (+919876500001)</span>
-              <span className="text-[10px] text-brand-600 font-semibold">Autofill</span>
-            </button>
-          </div>
-        </div>
 
         <div className="text-center text-xs text-gray-500 pt-2 border-t border-gray-100">
           Don't have an account yet?{' '}
