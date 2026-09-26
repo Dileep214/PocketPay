@@ -1,8 +1,18 @@
 import apiClient from './apiClient';
 
+const emitApplicationChanged = (jobId) => {
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('pocketpay:application-changed', {
+      detail: { jobId }
+    }));
+  }
+};
+
 export const applicationService = {
   applyToJob: async (jobId, workerNote = '') => {
-    return await apiClient.post(`/applications/jobs/${jobId}/apply`, { workerNote });
+    const response = await apiClient.post(`/applications/jobs/${jobId}/apply`, { workerNote });
+    emitApplicationChanged(jobId);
+    return response;
   },
 
   getMyApplications: async () => {

@@ -31,6 +31,16 @@ export const JobApplicantsPage = () => {
 
   useEffect(() => {
     fetchApplicants();
+
+    const handleApplicationChanged = (event) => {
+      if (!event.detail?.jobId || event.detail.jobId !== jobId) return;
+      fetchApplicants();
+    };
+
+    window.addEventListener('pocketpay:application-changed', handleApplicationChanged);
+    return () => {
+      window.removeEventListener('pocketpay:application-changed', handleApplicationChanged);
+    };
   }, [jobId]);
 
   const handleStatusUpdate = async (applicationId, newStatus) => {

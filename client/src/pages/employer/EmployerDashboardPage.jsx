@@ -38,6 +38,15 @@ export const EmployerDashboardPage = () => {
 
   useEffect(() => {
     fetchMyJobs();
+
+    const handleApplicationChanged = () => {
+      fetchMyJobs();
+    };
+
+    window.addEventListener('pocketpay:application-changed', handleApplicationChanged);
+    return () => {
+      window.removeEventListener('pocketpay:application-changed', handleApplicationChanged);
+    };
   }, []);
 
   const handleToggleStatus = async (jobId, currentStatus) => {
