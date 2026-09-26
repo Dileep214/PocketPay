@@ -55,7 +55,7 @@ export const LoginPage = () => {
             W
           </div>
           <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">
-            Log in to WorkNear
+            Log in to PocketPay
           </h1>
           <p className="text-xs sm:text-sm text-gray-500">
             Enter your mobile number and password

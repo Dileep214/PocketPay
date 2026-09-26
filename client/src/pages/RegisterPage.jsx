@@ -47,7 +47,7 @@ export const RegisterPage = () => {
         businessName: role === 'employer' ? businessName.trim() : undefined
       });
 
-      addToast(`Account created successfully! Welcome to WorkNear.`, 'success');
+      addToast(`Account created successfully! Welcome to PocketPay.`, 'success');
       if (user.role === 'employer') {
         navigate('/employer/dashboard');
       } else {

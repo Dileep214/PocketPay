@@ -38,7 +38,7 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
-          <p>© {new Date().getFullYear()} WorkNear. Built for local workers and businesses.</p>
+          <p>© {new Date().getFullYear()} PocketPay. Built for local workers and businesses.</p>
           <div className="flex gap-4">
             <span>No AI • No Chat • No Middleman Fees</span>
           </div>

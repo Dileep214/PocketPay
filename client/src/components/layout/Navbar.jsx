@@ -14,11 +14,11 @@ export const Navbar = () => {
         <div className="flex items-center gap-3">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-xl bg-brand-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-              W
+              P
             </div>
             <div>
               <span className="text-xl font-bold tracking-tight text-gray-900 group-hover:text-brand-600 transition-colors">
-                WorkNear
+                PocketPay
               </span>
               <span className="hidden sm:inline-block ml-2 text-[10px] font-semibold tracking-wider uppercase px-2 py-0.5 bg-brand-50 text-brand-700 rounded-full border border-brand-100">
                 Hyperlocal
