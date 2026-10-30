@@ -42,70 +42,66 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto py-6 sm:py-12">
-      <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
-        <div className="text-center space-y-2">
-          <div className="w-12 h-12 rounded-2xl bg-brand-50 text-brand-600 flex items-center justify-center font-bold text-xl mx-auto shadow-inner">
+    <div className="mx-auto max-w-md py-6 sm:py-12">
+      <div className="space-y-6 rounded-[32px] border border-slate-200 bg-white/85 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-8">
+        <div className="text-center space-y-3">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-600 to-blue-500 text-xl font-black text-white shadow-[0_18px_30px_rgba(37,99,235,0.28)]">
             W
           </div>
-          <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">
-            Log in to PocketPay
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-500">
-            Enter your mobile number and password
-          </p>
+          <div>
+            <h1 className="text-2xl font-black tracking-tight text-slate-900">
+              Log in to PocketPay
+            </h1>
+            <p className="mt-1 text-sm text-slate-500">
+              Enter your mobile number and password
+            </p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+            <label className="mb-1.5 block text-xs font-semibold text-slate-700">
               Mobile Phone Number
             </label>
             <div className="relative">
-              <Phone className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Phone className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 type="tel"
                 placeholder="+919876511111"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 required
-                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 focus:bg-white focus:outline-none transition-all"
+                className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-800 transition-all focus:border-blue-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20"
               />
             </div>
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-gray-700 mb-1.5">
+            <label className="mb-1.5 block text-xs font-semibold text-slate-700">
               Password
             </label>
             <div className="relative">
-              <Lock className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <Lock className="absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
               <input
                 type="password"
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:ring-2 focus:ring-brand-500 focus:bg-white focus:outline-none transition-all"
+                className="w-full rounded-2xl border border-slate-200 bg-slate-50 py-3 pl-10 pr-4 text-sm text-slate-800 transition-all focus:border-blue-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500/20"
               />
             </div>
           </div>
 
-          <Button
-            type="submit"
-            size="lg"
-            fullWidth
-            loading={loading}
-            className="mt-2"
-          >
+          <Button type="submit" size="lg" fullWidth loading={loading} className="mt-2">
             <span>Log In</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </form>
 
-        <div className="text-center text-xs text-gray-500 pt-2 border-t border-gray-100">
+        <div className="border-t border-slate-100 pt-3 text-center text-sm text-slate-500">
           Don't have an account yet?{' '}
-          <Link to="/register" className="font-bold text-brand-600 hover:text-brand-700">
+          <Link to="/register" className="font-bold text-brand-600 transition-colors hover:text-brand-700">
             Register Here
           </Link>
         </div>

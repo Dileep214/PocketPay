@@ -14,10 +14,12 @@ function App() {
       <ThemeProvider>
         <AuthProvider>
           <ToastProvider>
-            <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900 transition-colors duration-200">
+            <div className="app-shell min-h-screen flex flex-col text-slate-900">
               <Navbar />
-              <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6">
-                <AppRoutes />
+              <main className="flex-1 w-full px-4 pb-8 pt-5 md:px-6 lg:px-8">
+                <div className="mx-auto max-w-6xl">
+                  <AppRoutes />
+                </div>
               </main>
               <MobileBottomNav />
               <Footer />

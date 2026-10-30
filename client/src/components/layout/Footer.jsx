@@ -3,41 +3,41 @@ import { MapPin, ShieldCheck, Zap } from 'lucide-react';
 
 export const Footer = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-12 pb-20 md:pb-8">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-600 mb-8">
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 font-bold text-gray-900 text-base">
-              <Zap className="w-5 h-5 text-brand-600" />
+    <footer className="mt-12 border-t border-slate-200/80 bg-slate-950 text-slate-100">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:px-6">
+        <div className="mb-8 grid gap-5 md:grid-cols-3">
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <div className="mb-3 flex items-center gap-2 font-bold text-base text-white">
+              <Zap className="h-5 w-5 text-amber-300" />
               <span>Direct Local Hiring</span>
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-sm leading-relaxed text-slate-300">
               Connecting local shops and informal workers across Hyderabad in minutes with zero resumes and zero commissions.
             </p>
           </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 font-bold text-gray-900 text-base">
-              <ShieldCheck className="w-5 h-5 text-emerald-600" />
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <div className="mb-3 flex items-center gap-2 font-bold text-base text-white">
+              <ShieldCheck className="h-5 w-5 text-emerald-300" />
               <span>Verified Direct Contacts</span>
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-sm leading-relaxed text-slate-300">
               Employers and candidates connect directly via phone call or WhatsApp once shortlisted.
             </p>
           </div>
 
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 font-bold text-gray-900 text-base">
-              <MapPin className="w-5 h-5 text-red-500" />
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+            <div className="mb-3 flex items-center gap-2 font-bold text-base text-white">
+              <MapPin className="h-5 w-5 text-red-300" />
               <span>Hyperlocal in Hyderabad</span>
             </div>
-            <p className="text-xs text-gray-500 leading-relaxed">
+            <p className="text-sm leading-relaxed text-slate-300">
               Active across Madhapur, Gachibowli, Banjara Hills, Ameerpet, Kukatpally, and more.
             </p>
           </div>
         </div>
 
-        <div className="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-3">
+        <div className="flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-slate-400 sm:flex-row">
           <p>© {new Date().getFullYear()} PocketPay. Built for local workers and businesses.</p>
           <div className="flex gap-4">
             <span>No AI • No Chat • No Middleman Fees</span>

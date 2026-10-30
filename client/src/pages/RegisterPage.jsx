@@ -61,41 +61,40 @@ export const RegisterPage = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto py-6 sm:py-10">
-      <div className="bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-6">
+    <div className="mx-auto max-w-md py-6 sm:py-10">
+      <div className="space-y-6 rounded-[32px] border border-slate-200 bg-white/85 p-6 shadow-[0_24px_60px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:p-8">
         <div className="text-center space-y-2">
-          <h1 className="text-2xl font-extrabold text-gray-900 tracking-tight">
+          <h1 className="text-2xl font-black tracking-tight text-slate-900">
             Create Your Account
           </h1>
-          <p className="text-xs sm:text-sm text-gray-500">
+          <p className="text-sm text-slate-500">
             Join the hyperlocal network in Hyderabad
           </p>
         </div>
 
-        {/* Dual Role Toggle Button */}
-        <div className="bg-gray-100 p-1 rounded-2xl grid grid-cols-2 gap-1 text-xs font-bold">
+        <div className="grid grid-cols-2 gap-1 rounded-2xl bg-slate-100 p-1 text-xs font-bold">
           <button
             type="button"
             onClick={() => setRole('worker')}
-            className={`py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5 ${
+            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 transition-all ${
               role === 'worker'
-                ? 'bg-white text-brand-600 shadow-sm'
-                : 'text-gray-600 hover:text-gray-900'
+                ? 'bg-white text-brand-600 shadow-[0_10px_26px_rgba(37,99,235,0.12)]'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            <User className="w-4 h-4" />
+            <User className="h-4 w-4" />
             <span>I Want a Job</span>
           </button>
           <button
             type="button"
             onClick={() => setRole('employer')}
-            className={`py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5 ${
+            className={`flex items-center justify-center gap-1.5 rounded-xl py-2.5 transition-all ${
               role === 'employer'
-                ? 'bg-white text-brand-600 shadow-sm'
-                : 'text-gray-600 hover:text-gray-900'
+                ? 'bg-white text-brand-600 shadow-[0_10px_26px_rgba(37,99,235,0.12)]'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
-            <Building className="w-4 h-4" />
+            <Building className="h-4 w-4" />
             <span>I Want to Hire</span>
           </button>
         </div>

@@ -2,10 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Mobile-first touch enhancements */
+:root {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.2), transparent 20%),
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.18), transparent 22%),
+    linear-gradient(180deg, #f8fbff 0%, #eef4ff 32%, #f8fafc 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
 @layer base {
-  button, a, input, select, textarea {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  button,
+  a,
+  input,
+  select,
+  textarea {
     touch-action: manipulation;
+  }
+
+  ::selection {
+    background: rgba(37, 99, 235, 0.18);
+    color: #0f172a;
+  }
+}
+
+@layer components {
+  .app-shell {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .app-shell::before,
+  .app-shell::after {
+    content: '';
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .app-shell::before {
+    width: 24rem;
+    height: 24rem;
+    top: 1rem;
+    right: -4rem;
+    background: rgba(96, 165, 250, 0.18);
+  }
+
+  .app-shell::after {
+    width: 20rem;
+    height: 20rem;
+    bottom: 1rem;
+    left: -6rem;
+    background: rgba(251, 191, 36, 0.14);
+  }
+
+  .glass-panel {
+    @apply border border-slate-200/80 bg-white/80 shadow-[0_18px_45px_rgba(15,23,42,0.08)] backdrop-blur-xl;
+  }
+
+  .section-header {
+    @apply flex items-end justify-between gap-4;
+  }
+
+  .section-title {
+    @apply text-xl font-black tracking-tight text-slate-900 sm:text-2xl;
+  }
+
+  .section-kicker {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-slate-500;
+  }
+
+  .soft-card {
+    @apply rounded-3xl border border-slate-200/80 bg-white/90 shadow-[0_16px_40px_rgba(15,23,42,0.08)] transition-all duration-200 ease-out;
   }
 }
 

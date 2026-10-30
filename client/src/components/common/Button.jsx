@@ -12,21 +12,21 @@ export const Button = ({
   className = '',
   icon: Icon
 }) => {
-  const baseStyles = 'inline-flex items-center justify-center font-medium rounded-xl transition-all duration-150 select-none active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none';
+  const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-2xl transition-all duration-200 select-none active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none';
 
   const sizeStyles = {
     sm: 'text-xs px-3 py-2 h-9 gap-1.5',
     md: 'text-sm px-4 py-2.5 h-11 gap-2',
-    lg: 'text-base px-5 py-3.5 h-13 gap-2.5 font-semibold'
+    lg: 'text-base px-5 py-3.5 h-13 gap-2.5'
   };
 
   const variantStyles = {
-    primary: 'bg-brand-600 hover:bg-brand-700 text-white shadow-sm hover:shadow',
-    secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-800',
-    outline: 'border border-gray-300 hover:bg-gray-50 text-gray-700',
-    success: 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm',
-    danger: 'bg-red-600 hover:bg-red-700 text-white',
-    whatsapp: 'bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-sm'
+    primary: 'bg-gradient-to-r from-brand-600 to-blue-500 text-white shadow-[0_16px_30px_rgba(37,99,235,0.28)] hover:shadow-[0_20px_40px_rgba(37,99,235,0.34)] hover:-translate-y-0.5',
+    secondary: 'bg-slate-100 hover:bg-slate-200 text-slate-800 shadow-sm',
+    outline: 'border border-slate-300 hover:bg-slate-50 text-slate-700',
+    success: 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-[0_16px_30px_rgba(16,185,129,0.28)] hover:-translate-y-0.5',
+    danger: 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-[0_16px_30px_rgba(239,68,68,0.20)] hover:-translate-y-0.5',
+    whatsapp: 'bg-gradient-to-r from-[#25D366] to-[#1fbf5a] text-white shadow-[0_16px_30px_rgba(37,211,102,0.20)] hover:-translate-y-0.5'
   };
 
   return (
